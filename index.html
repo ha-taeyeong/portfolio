@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하태영 | Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --brand-navy: #0F172A;
+            --brand-blue: #2563EB;
+            --brand-teal: #10B981;
+            --bg-cream: #F8F9FA;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', 'Noto Sans KR', sans-serif; background-color: var(--bg-cream); color: var(--brand-navy); word-break: keep-all; line-height: 1.6; }
+        
+        .section-padding { padding-top: 100px; padding-bottom: 100px; }
+        
+        /* Professional Footprints Table Styling */
+        .footprints-table { width: 100%; border-collapse: separate; border-spacing: 0; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05); border: 1px solid #f1f5f9; }
+        .footprints-table th { background: #f8fafc; padding: 18px 24px; text-align: left; text-xs font-black uppercase tracking-widest text-slate-400 border-bottom: 1px solid #f1f5f9; }
+        .footprints-table td { padding: 18px 24px; border-bottom: 1px solid #f8fafc; font-size: 14px; }
+        .cat-academic { color: #2563eb; font-weight: 800; }
+        .cat-career { color: #0f172a; font-weight: 800; }
+        .cat-cert { color: #10b981; font-weight: 800; }
+
+        /* Skill Bars (Left Column) */
+        .skill-item { margin-bottom: 24px; }
+        .skill-label { display: flex; justify-content: space-between; font-size: 11px; font-weight: 900; color: #0f172a; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .skill-bar-bg { height: 6px; background: #f1f5f9; border-radius: 3px; overflow: hidden; }
+        .skill-bar-fill { height: 100%; background: #0f172a; border-radius: 3px; }
+
+        /* Project Card Styling */
+        .analysis-box { background: white; border-top: 4px solid var(--brand-navy); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-radius: 0 0 30px 30px; }
+        .project-card { background: white; border-radius: 30px; overflow: hidden; transition: all 0.4s ease; border: 1px solid #f1f5f9; }
+        .project-card:hover { transform: translateY(-10px); shadow: 0 30px 60px rgba(15, 23, 42, 0.1); }
+        
+        .tag { @apply px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-md mr-2 mb-2 inline-block; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <div onclick="window.scrollTo(0, 0)" class="font-extrabold text-2xl tracking-tighter cursor-pointer flex items-center gap-2">
+                <span class="w-8 h-8 bg-slate-900 text-white flex items-center justify-center rounded-lg text-sm font-poppins">HT</span>
+                <span class="font-poppins">TAEYEONG<span class="text-blue-600">.</span></span>
+            </div>
+            <div class="hidden md:flex space-x-12 text-xs font-black uppercase tracking-[0.2em] text-slate-400">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#history" class="hover:text-blue-600 transition">Footprints</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Engineering</a>
+                <a href="#lifelog" class="hover:text-blue-600 transition">Mindset</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-8 bg-white relative overflow-hidden">
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-20 items-center z-10 text-center md:text-left">
+            <div class="space-y-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 rounded-md border border-blue-100">
+                    <span class="text-[10px] font-black text-blue-600 uppercase tracking-widest">Precision Systems Engineer</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tighter text-slate-900">
+                    Optimizing <br><span class="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">The System.</span>
+                </h1>
+                <p class="text-slate-500 text-xl font-light leading-relaxed max-w-lg mx-auto md:mx-0">
+                    전자공학적 정밀함과 소프트웨어의 확장성을 결합합니다. <br>
+                    <strong>2.5년의 실무 경험</strong>을 바탕으로 결함 없는 아키텍처를 설계합니다.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-5">
+                    <a href="#projects" class="px-10 py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all shadow-xl shadow-slate-900/10 text-xs uppercase tracking-widest">Explore Case Studies</a>
+                    <a href="mailto:electro0218@gmail.com" class="px-10 py-5 bg-white border-2 border-slate-100 font-bold rounded-2xl hover:border-slate-900 transition-all text-xs uppercase tracking-widest">Connect</a>
+                </div>
+            </div>
+            <div class="relative hidden md:block">
+                <div class="relative bg-slate-100 rounded-[80px] overflow-hidden shadow-2xl rotate-3">
+                    <!-- <img src="profil.jpg" alt="하태영" class="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition duration-1000"> -->
+                    <img src="증명사진.png" alt="하태영" class="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition duration-1000">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="section-padding px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
+                
+                <div class="lg:col-span-4 space-y-12">
+                    <h2 class="text-5xl font-black tracking-tighter leading-none text-slate-900 uppercase">Professional <br>Footprints</h2>
+                    
+                    <div class="pt-10 space-y-8">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-8">Core Engineering Skills</p>
+                        <div class="skill-item">
+                            <div class="skill-label"><span>Java / Spring Boot</span><span>85%</span></div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span>PostgreSQL / PostGIS</span><span>90%</span></div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span>Python / FastAPI</span><span>70%</span></div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span>AWS / Infrastructure</span><span>65%</span></div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8">
+                    <table class="footprints-table">
+                        <thead>
+                            <tr>
+                                <th class="w-32">Category</th>
+                                <th>Details</th>
+                                <th class="w-40">Period</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="cat-academic">Academic</td><td class="font-bold">한림대학교 소프트웨어학부 (스마트IoT 전공)</td><td class="text-slate-400 font-medium">25.03 - Present</td></tr>
+                            <tr><td class="cat-academic">Academic</td><td class="font-bold">유한대학교 전자공학과 졸업</td><td class="text-slate-400 font-medium">15.03 - 20.02</td></tr>
+                            <tr><td class="cat-career">Career</td><td class="font-bold">(주)플레인브레드 개발부 (Backend Engineer)</td><td class="text-slate-400 font-medium">21.12 - 24.04</td></tr>
+                            <tr><td class="cat-career">Career</td><td class="font-bold">컴퓨존 생산부</td><td class="text-slate-400 font-medium">19.11 - 21.02</td></tr>
+                            <tr><td class="cat-career">Career</td><td class="font-bold">(주)한성 생산부 (산업기능요원)</td><td class="text-slate-400 font-medium">17.01 - 19.03</td></tr>
+                            <tr><td class="cat-cert">Certification</td><td class="font-bold">정보처리기사</td><td class="text-slate-400 font-medium">23.06</td></tr>
+                            <tr><td class="cat-cert">Certification</td><td class="font-bold">SQL 개발자 (SQLD)</td><td class="text-slate-400 font-medium">26.03</td></tr>
+                            <tr><td class="cat-cert">Certification</td><td class="font-bold text-blue-600 italic">데이터준전문가 (ADsP)</td><td class="text-slate-400 font-medium">26.06</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding bg-slate-50 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 font-poppins uppercase">Engineering Case Studies</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <div class="project-card group">
+                    <div class="h-60 bg-slate-900 flex items-center justify-center text-white relative">
+                        <span class="text-4xl font-black italic tracking-tighter font-poppins">MAPPING.</span>
+                        <div class="absolute bottom-6 left-8"><span class="tag bg-blue-600 text-white">PostGIS</span></div>
+                    </div>
+                    <div class="p-10 analysis-box">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">실시간 공간 데이터 매칭 플랫폼</h3>
+                        <div class="space-y-6">
+                            <div><p class="text-[10px] font-black text-slate-400 uppercase mb-2">Technical Challenge</p><p class="text-sm font-medium italic">"수만 개의 지리 데이터를 모바일 환경에서 꼬임 없이 실시간으로 처리해야 하는 과제"</p></div>
+                            <div><p class="text-[10px] font-black text-slate-400 uppercase mb-2">Engineering Solution</p>
+                                <ul class="text-sm space-y-2 list-none font-bold text-slate-600">
+                                    <li>• PostGIS 공간 인덱싱을 활용하여 반경 10km 이내 검색 속도 1초 이내 최적화</li>
+                                    <li>• 단일 진실 공급원(SSOT) 설계를 통해 비동기 데이터 로딩 정합성 100% 확보</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="h-60 bg-indigo-900 flex items-center justify-center text-white relative">
+                        <span class="text-4xl font-black italic tracking-tighter font-poppins">PLANUP.</span>
+                        <div class="absolute bottom-6 left-8"><span class="tag bg-orange-500 text-white">FastAPI & AI</span></div>
+                    </div>
+                    <div class="p-10 analysis-box" style="border-top-color: #4f46e5;">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">AI 기반 일정 자동화 시스템</h3>
+                        <div class="space-y-6">
+                            <div><p class="text-[10px] font-black text-slate-400 uppercase mb-2">Technical Challenge</p><p class="text-sm font-medium italic">"한국어 자연어 처리 모델의 한계로 인한 시간 추출의 부정확성 해결"</p></div>
+                            <div><p class="text-[10px] font-black text-slate-400 uppercase mb-2">Engineering Solution</p>
+                                <ul class="text-sm space-y-2 list-none font-bold text-slate-600">
+                                    <li>• FastAPI 기반 비동기 파이프라인으로 Duckling/Stanza 엔진 동시 운용</li>
+                                    <li>• AI 추출 결과를 유저가 즉시 교정하는 '피드백 레이어' 설계로 데이터 신뢰도 확보</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="h-60 bg-slate-800 flex items-center justify-center text-white relative">
+                        <span class="text-4xl font-black italic tracking-widest font-poppins uppercase">DIGITAL SAFETY.</span>
+                        <div class="absolute bottom-6 left-8"><span class="tag bg-blue-500 text-white">Spring Boot</span></div>
+                    </div>
+                    <div class="p-10 analysis-box" style="border-top-color: #1e293b;">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">디지털 안전 불감증 탈출 캠페인 시스템</h3>
+                        <div class="space-y-6">
+                            <div><p class="text-[10px] font-black text-slate-400 uppercase mb-2">Technical Challenge</p><p class="text-sm font-medium italic">"사용자 진입 장벽 완화와 익명 참여 시스템의 보안적 운영 안정성 확보"</p></div>
+                            <div><p class="text-[10px] font-black text-slate-400 uppercase mb-2">Engineering Solution</p>
+                                <ul class="text-sm space-y-2 list-none font-bold text-slate-600">
+                                    <li>• 비회원 CRUD 로직 설계 및 불법 콘텐츠 제어 시스템 구축</li>
+                                    <li>• 게이미피케이션(타자 게임)을 통한 보안 키워드 학습 유도 및 UGC 데이터 확보</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="h-60 bg-emerald-900 flex items-center justify-center text-white relative">
+                        <span class="text-4xl font-black italic tracking-widest font-poppins uppercase">SMART WASTE.</span>
+                        <div class="absolute bottom-6 left-8"><span class="tag bg-emerald-500 text-white">AWS Cloud</span></div>
+                    </div>
+                    <div class="p-10 analysis-box" style="border-top-color: #065f46;">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">글로벌 폐기물 솔루션 인프라</h3>
+                        <div class="space-y-6">
+                            <div><p class="text-[10px] font-black text-slate-400 uppercase mb-2">Technical Challenge</p><p class="text-sm font-medium italic">"글로벌 서비스 확장을 위한 고가용성 인프라 및 AI 분석 파이프라인 설계"</p></div>
+                            <div><p class="text-[10px] font-black text-slate-400 uppercase mb-2">Engineering Solution</p>
+                                <ul class="text-sm space-y-2 list-none font-bold text-slate-600">
+                                    <li>• AWS EC2 기반의 서비스 배포 및 AS-IS/TO-BE 전략 로드맵 수립</li>
+                                    <li>• Gemini Vision API 기반 폐기물 분류 AI 엔진 연동 및 데이터 중앙 관리 체계 수립</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="lifelog" class="section-padding bg-slate-900 text-white relative">
+        <div class="max-w-6xl mx-auto px-8">
+            <h2 class="text-4xl font-black text-center mb-24 font-poppins uppercase tracking-widest">Grit & Discipline</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="p-12 rounded-[50px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 group">
+                    <div class="flex justify-between mb-10">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-3xl shadow-2xl shadow-blue-500/40"><i class="fa-solid fa-person-running"></i></div>
+                        <div class="text-right">
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Marathon 10K</p>
+                            <p class="text-4xl font-extrabold text-blue-500 font-poppins">52:14</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed italic border-l-4 border-blue-600 pl-6">
+                        "숨이 턱 끝까지 차오르는 사점(Dead Point)을 극복하는 끈기는 프로젝트의 마지막 디테일까지 책임지는 완주 정신의 원천입니다."
+                    </p>
+                </div>
+                <div class="p-12 rounded-[50px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 group">
+                    <div class="flex justify-between mb-10">
+                        <div class="w-16 h-16 rounded-2xl bg-teal-500 flex items-center justify-center text-3xl shadow-2xl shadow-teal-500/40"><i class="fa-solid fa-person-swimming"></i></div>
+                        <div class="text-right">
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Swim Rep</p>
+                            <p class="text-4xl font-extrabold text-teal-500 font-poppins">강원대표</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed italic border-l-4 border-teal-500 pl-6">
+                        "지역 대표로서 0.01초를 단축하기 위해 매일 새벽 물살을 가르며 오너십과 고도의 평정심을 배웠습니다."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-32 border-t border-slate-100 text-center">
+        <div class="max-w-4xl mx-auto px-8">
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-12 leading-tight">
+                시스템의 0.1% 효율을 고민하겠습니다.
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 text-center max-w-xl mx-auto">
+                <div><p class="text-[10px] font-black text-slate-300 uppercase tracking-widest">Connect</p><p class="font-bold">electro0218@gmail.com</p></div>
+                <div><p class="text-[10px] font-black text-slate-300 uppercase tracking-widest">Phone</p><p class="font-bold">010-7261-1378</p></div>
+            </div>
+            <p class="text-[10px] text-slate-300 font-black uppercase tracking-[0.5em]">© 2026 ENGINEER HA TAEYEONG. RIGOROUSLY BUILT WITH PRECISION.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
